@@ -1,6 +1,9 @@
 const express = require('express');
 
 const userRouter = require('./user.router');
+const sectorRouter = require('./sector.router');
+const zoneRouter = require('./zone.router');
+const alertRouter = require('./alert.router');
 
 
 function routerApi(app, env) {
@@ -11,7 +14,10 @@ function routerApi(app, env) {
 
 
 
+  router.use('/alert', alertRouter);
   router.use('/user', userRouter);
+  router.use('/sector', sectorRouter);
+  router.use('/zone', zoneRouter);
 }
 
 module.exports = routerApi;

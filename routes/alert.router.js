@@ -1,5 +1,5 @@
 const express = require('express');
-const AlertService = require('./../services/user.service');
+const AlertService = require('./../services/alert.service');
 
 const router = express.Router();
 const alertService = new AlertService();
@@ -17,6 +17,7 @@ router.get('/', async (req, res) => {
 router.post('/', async (req, res) => {
   try {
     const body = req.body;
+    console.log("body de alert", body);
     res.status(201).json(await(alertService.create(body)));
   } catch (error) {
     console.error(error);
