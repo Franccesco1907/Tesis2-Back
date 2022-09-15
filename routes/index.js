@@ -4,6 +4,7 @@ const userRouter = require('./user.router');
 const sectorRouter = require('./sector.router');
 const zoneRouter = require('./zone.router');
 const alertRouter = require('./alert.router');
+const riskRouter = require('./risk.router');
 
 
 function routerApi(app, env) {
@@ -15,6 +16,7 @@ function routerApi(app, env) {
 
 
   router.use('/alert', alertRouter);
+  router.use('/risk', riskRouter);
   router.use('/user', userRouter);
   router.use('/sector', sectorRouter);
   router.use('/zone', zoneRouter);

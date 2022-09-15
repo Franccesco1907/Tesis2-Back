@@ -17,7 +17,6 @@ router.get('/', async (req, res) => {
 router.post('/', async (req, res) => {
   try {
     const body = req.body;
-    console.log("body de alert", body);
     res.status(201).json(await(alertService.create(body)));
   } catch (error) {
     console.error(error);
