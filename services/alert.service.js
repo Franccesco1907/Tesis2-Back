@@ -27,6 +27,12 @@ class AlertService {
     const [alerts] = await sequelize.query(query);
     return alerts;
   }
+  
+  async mitigateAlert(id_alerta_riesgo) {
+    const query = `UPDATE alerta_riesgo SET estado = 'M' WHERE id_alerta_riesgo = ${id_alerta_riesgo};`;
+    const [alertMitigated] = await sequelize.query(query);
+    return alertMitigated;
+  }
 
   async updateAlert(risk) {
     const query = `UPDATE alerta_riesgo
