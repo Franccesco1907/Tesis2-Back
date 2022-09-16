@@ -7,7 +7,7 @@ const sectorService = new SectorService();
 router.get('/', async (req, res) => {
   try {
     const sectors = await(sectorService.getSectors());
-    res.json(sectors);
+    res.status(200).json(sectors);
   } catch (error) {
     console.error(error);
   }
