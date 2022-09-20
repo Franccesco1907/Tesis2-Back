@@ -15,4 +15,15 @@ router.get('/id_sector=:id_sector&id_zona=:id_zona', async (req, res) => {
   }
 });
 
+router.get('/id_equipo_seguridad=:id_equipo_seguridad', async (req, res) => {
+  try {
+    let id_equipo_seguridad = req.params.id_equipo_seguridad;
+    console.log("id_equipo_seguridad", id_equipo_seguridad)
+    const [securityEquipment] = await(securityEquipmentService.getSecurityEquipment(id_equipo_seguridad));
+    res.status(200).json(securityEquipment);
+  } catch (error) {
+    console.error(error);
+  }
+});
+
 module.exports = router;
