@@ -7,6 +7,7 @@ const personalProtectiveEquipmentRouter = require('./personalProtectiveEquipment
 const zoneRouter = require('./zone.router');
 const alertRouter = require('./alert.router');
 const riskRouter = require('./risk.router');
+const componentRouter = require('./component.router');
 
 
 function routerApi(app, env) {
@@ -24,6 +25,7 @@ function routerApi(app, env) {
   router.use('/security-equipment', securityEquipmentRouter);
   router.use('/personal-protective-equipment', personalProtectiveEquipmentRouter);
   router.use('/zone', zoneRouter);
+  router.use('/component', componentRouter);
 }
 
 module.exports = routerApi;
