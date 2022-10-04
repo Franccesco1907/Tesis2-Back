@@ -6,6 +6,7 @@ const securityEquipmentRouter = require('./securityEquipment.router');
 const personalProtectiveEquipmentRouter = require('./personalProtectiveEquipment.router');
 const zoneRouter = require('./zone.router');
 const alertRouter = require('./alert.router');
+const authRouter = require('./auth.router');
 const riskRouter = require('./risk.router');
 const componentRouter = require('./component.router');
 
@@ -19,6 +20,7 @@ function routerApi(app, env) {
 
 
   router.use('/alert', alertRouter);
+  router.use('/auth', authRouter);
   router.use('/risk', riskRouter);
   router.use('/user', userRouter);
   router.use('/sector', sectorRouter);
