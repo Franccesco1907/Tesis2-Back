@@ -1,0 +1,13 @@
+DROP TABLE IF EXISTS historico_inspeccion;
+DROP TABLE IF EXISTS componente;
+DROP TABLE IF EXISTS plan_accion;
+DROP TABLE IF EXISTS equipo_seguridad;
+DROP TABLE IF EXISTS inspeccion;
+DROP TABLE IF EXISTS evidencia;
+DROP TABLE IF EXISTS seguimiento_riesgo;
+DROP TABLE IF EXISTS alerta_riesgo;
+DROP TABLE IF EXISTS equipo_proteccion_personal;
+DROP TABLE IF EXISTS zona;
+DROP TABLE IF EXISTS usuario;
+DROP TABLE IF EXISTS rol;
+DROP TABLE IF EXISTS sector;
