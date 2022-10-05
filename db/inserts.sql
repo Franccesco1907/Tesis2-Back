@@ -26,6 +26,8 @@ INSERT INTO zona (id_sector, nombre, estado) values (3, 'Oficina de recursos hum
 
 
 INSERT INTO usuario (id_rol, id_sector, correo_personal, correo_trabajo, celular_personal, celular_trabajo, contrasena, nombres, apellido_paterno, apellido_materno, dni, estado) VALUES (1, 2, 'freddy@gmail.com', 'freddy_analista@tesis.com', '999999999', '987654321', 'tesis', 'Freddy Ramón', 'De la torre', 'Izquierdo', '77777777', 'A');
+INSERT INTO usuario (id_rol, id_sector, correo_personal, correo_trabajo, celular_personal, celular_trabajo, contrasena, nombres, apellido_paterno, apellido_materno, dni, estado) VALUES (2, 2, 'alex@gmail.com', 'alex_jefe@tesis.com', '999999999', '987654321', 'tesis', 'Alex Aldair', 'Pan', 'Li', '77777777', 'A');
+INSERT INTO usuario (id_rol, id_sector, correo_personal, correo_trabajo, celular_personal, celular_trabajo, contrasena, nombres, apellido_paterno, apellido_materno, dni, estado) VALUES (3, 2, 'pilar@gmail.com', 'pilar_supervisor@tesis.com', '999999999', '987654321', 'tesis', 'Pilar Maritza', 'Llantoy', 'Sanchez', '77777777', 'A');
 
 
 
@@ -33,14 +35,14 @@ INSERT INTO equipo_seguridad (id_sector, id_zona, estado_fisico, estado_control,
 
 
 
-INSERT INTO componente (id_equipo_seguridad, nombre, buen_estado, id_usuario) VALUES (1, 'Manquera y boquilla', true);
-INSERT INTO componente (id_equipo_seguridad, nombre, buen_estado, id_usuario) VALUES (1, 'Tobera de descarga', true);
-INSERT INTO componente (id_equipo_seguridad, nombre, buen_estado, id_usuario) VALUES (1, 'Grampa', true);
-INSERT INTO componente (id_equipo_seguridad, nombre, buen_estado, id_usuario) VALUES (1, 'Manómetro', false);
-INSERT INTO componente (id_equipo_seguridad, nombre, buen_estado, id_usuario) VALUES (1, 'Palanca de descarga', true);
-INSERT INTO componente (id_equipo_seguridad, nombre, buen_estado, id_usuario) VALUES (1, 'Manija de transporte', true);
-INSERT INTO componente (id_equipo_seguridad, nombre, buen_estado, id_usuario) VALUES (1, 'Cilindro', true);
-INSERT INTO componente (id_equipo_seguridad, nombre, buen_estado, id_usuario) VALUES (1, 'Pasador', true);
+INSERT INTO componente (id_equipo_seguridad, nombre, buen_estado) VALUES (1, 'Manquera y boquilla', true);
+INSERT INTO componente (id_equipo_seguridad, nombre, buen_estado) VALUES (1, 'Tobera de descarga', true);
+INSERT INTO componente (id_equipo_seguridad, nombre, buen_estado) VALUES (1, 'Grampa', true);
+INSERT INTO componente (id_equipo_seguridad, nombre, buen_estado) VALUES (1, 'Manómetro', false);
+INSERT INTO componente (id_equipo_seguridad, nombre, buen_estado) VALUES (1, 'Palanca de descarga', true);
+INSERT INTO componente (id_equipo_seguridad, nombre, buen_estado) VALUES (1, 'Manija de transporte', true);
+INSERT INTO componente (id_equipo_seguridad, nombre, buen_estado) VALUES (1, 'Cilindro', true);
+INSERT INTO componente (id_equipo_seguridad, nombre, buen_estado) VALUES (1, 'Pasador', true);
 
 
 

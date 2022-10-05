@@ -1,4 +1,5 @@
 DROP TABLE IF EXISTS historico_inspeccion;
+DROP TABLE IF EXISTS historico_componente;
 DROP TABLE IF EXISTS componente;
 DROP TABLE IF EXISTS plan_accion;
 DROP TABLE IF EXISTS equipo_seguridad;
