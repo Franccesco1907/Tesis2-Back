@@ -25,7 +25,7 @@ CREATE TABLE zona(
 
 
 CREATE TABLE usuario (
-    id_usuario int generated always as identity,
+  id_usuario int generated always as identity,
 	id_rol int,
 	id_sector int,
 	correo_personal character varying(100),
@@ -192,6 +192,80 @@ CREATE TABLE historico_componente (
 	constraint fk_componente
 		foreign key(id_componente)
 			references componente(id_componente),
+	constraint fk_usuario
+		foreign key(id_usuario)
+			references usuario(id_usuario)
+);
+
+CREATE TABLE capacitacion (
+	id_capacitacion int generated always as identity,
+	id_rol int,
+	nombre character varying(50),
+	fecha_hora timestamp,
+	estado character varying(1),
+	primary key(id_capacitacion),
+	constraint fk_rol
+		foreign key(id_rol)
+			references rol(id_rol)
+);
+
+CREATE TABLE curso (
+	id_curso int generated always as identity,
+	nombre character varying(50),
+	fecha_creacion timestamp,
+	cuestionario character varying(150),
+	primary key(id_curso)
+);
+
+CREATE TABLE curso_capacitacion (
+	id_curso_capacitacion int generated always as identity,
+	id_curso int,
+	id_capacitacion int,
+	primary key(id_curso_capacitacion),
+	constraint fk_curso
+		foreign key(id_curso)
+			references curso(id_curso),
+	constraint fk_capacitacion
+		foreign key(id_capacitacion)
+			references capacitacion(id_capacitacion)
+);
+
+CREATE TABLE material (
+	id_material int generated always as identity,
+	nombre character varying(50),
+	fecha_creacion timestamp,
+	enlace character varying(150),
+	tipo character varying(20),
+	primary key(id_material)
+);
+
+CREATE TABLE material_curso (
+	id_material_curso int generated always as identity,
+	id_material int,
+	id_curso int,
+	primary key(id_material_curso),
+	constraint fk_material
+		foreign key(id_material)
+			references material(id_material),
+	constraint fk_curso
+		foreign key(id_curso)
+			references curso(id_curso)
+);
+
+CREATE TABLE cuestionario(
+	id_cuestionario int generated always as identity,
+	id_capacitacion int,
+	id_curso int,
+	id_usuario int,
+	nota int,
+	estado character varying(50),
+	primary key(id_cuestionario),
+	constraint fk_capacitacion
+		foreign key(id_capacitacion)
+			references capacitacion(id_capacitacion),
+	constraint fk_curso
+		foreign key(id_curso)
+			references curso(id_curso),
 	constraint fk_usuario
 		foreign key(id_usuario)
 			references usuario(id_usuario)
