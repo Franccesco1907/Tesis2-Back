@@ -201,7 +201,7 @@ CREATE TABLE capacitacion (
 	id_capacitacion int generated always as identity,
 	id_rol int,
 	nombre character varying(50),
-	fecha_hora timestamp, 
+	fecha_hora timestamp,
 	estado character varying(1),
 	primary key(id_capacitacion),
 	constraint fk_rol

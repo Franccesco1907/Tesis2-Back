@@ -9,6 +9,8 @@ const alertRouter = require('./alert.router');
 const authRouter = require('./auth.router');
 const riskRouter = require('./risk.router');
 const componentRouter = require('./component.router');
+const capacitationRouter = require('./capacitation.router');
+const courseRouter = require('./course.router');
 
 
 function routerApi(app, env) {
@@ -21,6 +23,8 @@ function routerApi(app, env) {
 
   router.use('/alert', alertRouter);
   router.use('/auth', authRouter);
+  router.use('/capacitation', capacitationRouter);
+  router.use('/course', courseRouter);
   router.use('/risk', riskRouter);
   router.use('/user', userRouter);
   router.use('/sector', sectorRouter);
