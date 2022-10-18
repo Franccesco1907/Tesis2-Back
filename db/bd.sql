@@ -201,14 +201,14 @@ CREATE TABLE capacitacion (
 	id_capacitacion int generated always as identity,
 	id_rol int,
 	nombre character varying(50),
-	fecha_hora timestamp,
+	fecha_hora timestamp, 
 	estado character varying(1),
 	primary key(id_capacitacion),
 	constraint fk_rol
 		foreign key(id_rol)
 			references rol(id_rol)
 );
-
+-- Añadir campo fecha_creacion
 CREATE TABLE curso (
 	id_curso int generated always as identity,
 	nombre character varying(50),

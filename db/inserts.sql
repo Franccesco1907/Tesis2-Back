@@ -125,3 +125,16 @@ INSERT INTO equipo_proteccion_personal (id_zona, nombre, obligatorio, estado) VA
 INSERT INTO equipo_proteccion_personal (id_zona, nombre, obligatorio, estado) VALUES (8, 'Protección respiratoria', true, 'A');
 INSERT INTO equipo_proteccion_personal (id_zona, nombre, obligatorio, estado) VALUES (8, 'Tapones', true, 'A');
 INSERT INTO equipo_proteccion_personal (id_zona, nombre, obligatorio, estado) VALUES (8, 'Orejeras', true, 'A');
+
+
+
+INSERT INTO curso (nombre, fecha_creacion, cuestionario) VALUES ('Seguridad y salud en el trabajo', NOW(), 'https://docs.google.com/forms/d/e/1FAIpQLScv261qThl38Q4G1rTmEvIyw5Pv3YX96dA2XnKhhy6W9FXVvA/viewform?usp=sf_link');
+INSERT INTO curso (nombre, fecha_creacion, cuestionario) VALUES ('Restricciones por COVID 19', NOW(), 'https://docs.google.com/forms/d/e/1FAIpQLScv261qThl38Q4G1rTmEvIyw5Pv3YX96dA2XnKhhy6W9FXVvA/viewform?usp=sf_link');
+INSERT INTO curso (nombre, fecha_creacion, cuestionario) VALUES ('Uso de equipos de protección del personal', NOW(), 'https://docs.google.com/forms/d/e/1FAIpQLScv261qThl38Q4G1rTmEvIyw5Pv3YX96dA2XnKhhy6W9FXVvA/viewform?usp=sf_link');
+
+INSERT INTO capacitacion (id_rol, nombre, fecha_hora, estado) VALUES (3, 'Capacitación en seguridad y salud en el trabajo', NOW(), 'A');
+INSERT INTO capacitacion (id_rol, nombre, fecha_hora, estado) VALUES (3, 'Capacitación en equipamentos de seguridad', NOW(), 'A');
+
+INSERT INTO curso_capacitacion (id_capacitacion, id_curso) VALUES (1, 1);
+INSERT INTO curso_capacitacion (id_capacitacion, id_curso) VALUES (1, 2);
+INSERT INTO curso_capacitacion (id_capacitacion, id_curso) VALUES (2, 3);
