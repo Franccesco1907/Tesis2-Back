@@ -143,5 +143,10 @@ INSERT INTO curso_capacitacion (id_capacitacion, id_curso) VALUES (2, 3);
 INSERT INTO material (nombre, fecha_creacion, enlace, tipo) VALUES ('LECTURA DE SEGURIDAD EN EL TRABAJO', NOW(), 'https://www.ilo.org/wcmsp5/groups/public/@americas/@ro-lima/@ilo-buenos_aires/documents/publication/wcms_248685.pdf', 'archivo');
 INSERT INTO material (nombre, fecha_creacion, enlace, tipo) VALUES ('VIDEO DE SEGURIDAD EN EL TRABAJO', NOW(), 'https://www.youtube.com/watch?v=y6jhr7QLNug', 'video');
 
+
 INSERT INTO material_curso(id_material, id_curso) VALUES (1, 1);
 INSERT INTO material_curso(id_material, id_curso) VALUES (2, 1);
+
+
+INSERT INTO cuestionario (id_capacitacion, id_curso, id_usuario, nota, estado) VALUES (1, 1, 3, 10, 'A');
+INSERT INTO cuestionario (id_capacitacion, id_curso, id_usuario, nota, estado) VALUES (1, 2, 3, 10, 'A');

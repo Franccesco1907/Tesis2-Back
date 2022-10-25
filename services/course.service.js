@@ -18,7 +18,7 @@ class CourseService {
     WHERE curso.id_curso = curso_capacitacion.id_curso
     AND capacitacion.id_capacitacion = curso_capacitacion.id_capacitacion
     AND capacitacion.id_capacitacion = ${id_capacitacion}
-    AND curso.id_curso = ${id_curso}`;
+    AND curso.id_curso = ${id_curso};`;
     const [[data]] = await sequelize.query(query);
     return data;
   }
