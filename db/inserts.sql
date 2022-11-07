@@ -1,34 +1,34 @@
-INSERT INTO rol(nombre, estado) values ('Analista','A');
-INSERT INTO rol(nombre, estado) values ('Jefe de planta','A');
-INSERT INTO rol(nombre, estado) values ('Supervisor','A');
-INSERT INTO rol(nombre, estado) values ('Repartidor','A');
-INSERT INTO rol(nombre, estado) values ('Cargador','A');
-INSERT INTO rol(nombre, estado) values ('Limpieza','A');
-INSERT INTO rol(nombre, estado) values ('Jefe de finanzas','A');
+INSERT INTO rol(nombre, estado) VALUES ('Analista','A');
+INSERT INTO rol(nombre, estado) VALUES ('Jefe de planta','A');
+INSERT INTO rol(nombre, estado) VALUES ('Supervisor','A');
+INSERT INTO rol(nombre, estado) VALUES ('Repartidor','A');
+INSERT INTO rol(nombre, estado) VALUES ('Cargador','A');
+INSERT INTO rol(nombre, estado) VALUES ('Limpieza','A');
+INSERT INTO rol(nombre, estado) VALUES ('Jefe de finanzas','A');
+INSERT INTO rol (nombre, estado) VALUES ('Seguridad', 'A');
+
+
+INSERT INTO sector(nombre, estado) VALUES ('Almacén', 'A');
+INSERT INTO sector(nombre, estado) VALUES ('Productivo', 'A');
+INSERT INTO sector(nombre, estado) VALUES ('Administrativo', 'A');
 
 
 
-INSERT INTO sector(nombre, estado) values ('Almacén', 'A');
-INSERT INTO sector(nombre, estado) values ('Productivo', 'A');
-INSERT INTO sector(nombre, estado) values ('Administrativo', 'A');
-
-
-
-INSERT INTO zona (id_sector, nombre, estado) values (1, 'Zona A', 'A');
-INSERT INTO zona (id_sector, nombre, estado) values (1, 'Zona B', 'A');
-INSERT INTO zona (id_sector, nombre, estado) values (2, 'Línea de embotellamiento', 'A');
-INSERT INTO zona (id_sector, nombre, estado) values (2, 'Línea de llenado', 'A');
-INSERT INTO zona (id_sector, nombre, estado) values (2, 'Línea de sellado', 'A');
-INSERT INTO zona (id_sector, nombre, estado) values (3, 'Oficina de planeamiento', 'A');
-INSERT INTO zona (id_sector, nombre, estado) values (3, 'Oficina administrativa', 'A');
-INSERT INTO zona (id_sector, nombre, estado) values (3, 'Oficina de recursos humanos', 'A');
+INSERT INTO zona (id_sector, nombre, estado) VALUES (1, 'Zona A', 'A');
+INSERT INTO zona (id_sector, nombre, estado) VALUES (1, 'Zona B', 'A');
+INSERT INTO zona (id_sector, nombre, estado) VALUES (2, 'Línea de embotellamiento', 'A');
+INSERT INTO zona (id_sector, nombre, estado) VALUES (2, 'Línea de llenado', 'A');
+INSERT INTO zona (id_sector, nombre, estado) VALUES (2, 'Línea de sellado', 'A');
+INSERT INTO zona (id_sector, nombre, estado) VALUES (3, 'Oficina de planeamiento', 'A');
+INSERT INTO zona (id_sector, nombre, estado) VALUES (3, 'Oficina administrativa', 'A');
+INSERT INTO zona (id_sector, nombre, estado) VALUES (3, 'Oficina de recursos humanos', 'A');
 
 
 
 INSERT INTO usuario (id_rol, id_sector, correo_personal, correo_trabajo, celular_personal, celular_trabajo, contrasena, nombres, apellido_paterno, apellido_materno, dni, estado) VALUES (1, 2, 'freddy@gmail.com', 'freddy_analista@tesis.com', '999999999', '987654321', 'tesis', 'Freddy Ramón', 'De la torre', 'Izquierdo', '77777777', 'A');
 INSERT INTO usuario (id_rol, id_sector, correo_personal, correo_trabajo, celular_personal, celular_trabajo, contrasena, nombres, apellido_paterno, apellido_materno, dni, estado) VALUES (2, 2, 'alex@gmail.com', 'alex_jefe@tesis.com', '999999999', '987654321', 'tesis', 'Alex Aldair', 'Pan', 'Li', '77777777', 'A');
 INSERT INTO usuario (id_rol, id_sector, correo_personal, correo_trabajo, celular_personal, celular_trabajo, contrasena, nombres, apellido_paterno, apellido_materno, dni, estado) VALUES (3, 2, 'pilar@gmail.com', 'pilar_supervisor@tesis.com', '999999999', '987654321', 'tesis', 'Pilar Maritza', 'Llantoy', 'Sanchez', '77777777', 'A');
-
+INSERT INTO usuario (id_rol, id_sector, correo_personal, correo_trabajo, celular_personal, celular_trabajo, contrasena, nombres, apellido_paterno, apellido_materno, dni, estado) VALUES (8, 2, 'antonio@gmail.com', 'antonio_seguridad@tesis.com', '999999999', '987654321', 'tesis', 'Antonio César', 'Ramirez', 'Valverde', '77797787', 'A');
 
 
 INSERT INTO equipo_seguridad (id_sector, id_zona, estado_fisico, estado_control, nombre, numero_serie, marca, posicion, nota, fecha_adquisicion, fecha_vencimiento) VALUES (2, 3, 'En posición', 'Requiere acción inmediata', 'Extintor', 'V846866', 'Amerex', 'POS-23', 'Cambiar manómetro por desgaste, caducó fecha de mantenimiento', '2022-01-01', '2023-12-31');

@@ -13,6 +13,8 @@ const capacitationRouter = require('./capacitation.router');
 const courseRouter = require('./course.router');
 const materialRouter = require('./material.router');
 const testRouter = require('./test.router');
+const uploadRouter = require('./upload.router');
+const inspectionRouter = require('./inspection.router');
 
 
 function routerApi(app, env) {
@@ -29,12 +31,14 @@ function routerApi(app, env) {
   router.use('/course', courseRouter);
   router.use('/risk', riskRouter);
   router.use('/user', userRouter);
+  router.use('/inspection', inspectionRouter);
   router.use('/sector', sectorRouter);
   router.use('/security-equipment', securityEquipmentRouter);
   router.use('/personal-protective-equipment', personalProtectiveEquipmentRouter);
   router.use('/zone', zoneRouter);
   router.use('/component', componentRouter);
   router.use('/material', materialRouter);
+  router.use('/upload', uploadRouter);
   router.use('/test', testRouter);
 }
 

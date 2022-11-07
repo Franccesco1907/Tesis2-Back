@@ -8,8 +8,9 @@ router.get('/id_sector=:id_sector&id_zona=:id_zona', async (req, res) => {
   try {
     let {id_sector, id_zona} = req.params;
     console.log("id_sector, id_zona", id_sector, id_zona)
-    const securityEquipments = await(securityEquipmentService.getSecurityEquipments(id_sector, id_zona));
-    res.status(200).json(securityEquipments);
+    if(id_sector != 0)
+      res.status(200).json(await(securityEquipmentService.getSecurityEquipmentsBySectorAndZone(id_sector, id_zona)));
+    else res.status(200).json(await securityEquipmentService.getSecurityEquipments());
   } catch (error) {
     console.error(error);
   }
