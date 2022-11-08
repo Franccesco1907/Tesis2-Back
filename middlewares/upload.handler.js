@@ -16,11 +16,11 @@ const storage = multer.diskStorage({
 });
 // Validacion del tipo de archivo y limite maximo
 // Controla cuáles archivos deben ser subidos y cuáles deben ser omitidos
-const maxSize = 2 * 1024 * 1024;
+const maxSize = 100 * 1024 * 1024;
 const upload = multer({
   storage,
   fileFilter: function (_req, file, cb) {
-    let filetypes = /docx|doc|pdf|png|jpg/;
+    let filetypes = /docx|doc|pdf|png|jpg|mp4|mkv/;
     let mimetype = filetypes.test(file.mimetype);
     let extname = filetypes.test(file.originalname.split(".").pop());
     if (mimetype && extname) {

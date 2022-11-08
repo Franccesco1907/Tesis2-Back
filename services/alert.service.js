@@ -25,7 +25,8 @@ class AlertService {
     INNER JOIN sector ON sector.id_sector = alerta_riesgo.id_sector AND sector.estado = 'A'
     INNER JOIN zona ON zona.id_zona = alerta_riesgo.id_sector AND zona.estado = 'A'
     LEFT JOIN evidencia ON evidencia.id_alerta_riesgo = alerta_riesgo.id_alerta_riesgo
-    WHERE alerta_riesgo.estado = 'A';`;
+    WHERE alerta_riesgo.estado = 'A'
+    ORDER BY alerta_riesgo.fecha_hora DESC;`;
     const [alerts] = await sequelize.query(query);
     return alerts;
   }
