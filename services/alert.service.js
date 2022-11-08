@@ -19,10 +19,12 @@ class AlertService {
   }
 
   async getAlerts() {
-    const query = `SELECT id_alerta_riesgo, incidente, gravedad, sector.nombre as nombre_sector, zona.nombre as nombre_zona, fecha_hora, descripcion
+    const query = `SELECT alerta_riesgo.id_alerta_riesgo, incidente, gravedad, sector.nombre as nombre_sector, 
+    zona.nombre as nombre_zona, fecha_hora, descripcion, evidencia.ubicacion
     FROM alerta_riesgo
     INNER JOIN sector ON sector.id_sector = alerta_riesgo.id_sector AND sector.estado = 'A'
     INNER JOIN zona ON zona.id_zona = alerta_riesgo.id_sector AND zona.estado = 'A'
+    LEFT JOIN evidencia ON evidencia.id_alerta_riesgo = alerta_riesgo.id_alerta_riesgo
     WHERE alerta_riesgo.estado = 'A';`;
     const [alerts] = await sequelize.query(query);
     return alerts;

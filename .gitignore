@@ -105,3 +105,6 @@ dist
 
 # Credentials
 credentials.json
+
+# Files
+public/
