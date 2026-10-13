@@ -5,17 +5,17 @@ const sequelize = require("../libs/sequelize");
 class AuthService {
   async userExist(email) {
     let query = `SELECT * FROM usuario
-    WHERE correo_trabajo = '${email}';`
-    let [user] = await sequelize.query(query);
+    WHERE correo_trabajo = :email;`
+    let [user] = await sequelize.query(query, { replacements: { email } });
     
     return user.length > 0;
   }
 
   async passwordIncorrect(email, password) {
     let query = `SELECT * FROM usuario
-    WHERE correo_trabajo = '${email}'
-    AND contrasena = '${password}';`
-    let [user] = await sequelize.query(query);
+    WHERE correo_trabajo = :email
+    AND contrasena = :password;`
+    let [user] = await sequelize.query(query, { replacements: { email, password } });
     
     return user.length == 0;
   }
@@ -26,10 +26,10 @@ class AuthService {
     FROM usuario u
     INNER JOIN rol r ON r.id_rol = u.id_rol
     INNER JOIN sector s ON s.id_sector = u.id_sector
-    WHERE correo_trabajo = '${email}'
-    AND contrasena = '${password}';`
+    WHERE correo_trabajo = :email
+    AND contrasena = :password;`
 
-    let [[data]] = await sequelize.query(query);
+    let [[data]] = await sequelize.query(query, { replacements: { email, password } });
 
     return data;
   }
